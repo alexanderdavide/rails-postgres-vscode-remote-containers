@@ -1,0 +1,27 @@
+{
+  "name": "rails-postgres",
+  "dockerComposeFile": "../docker-compose.yml",
+  "workspaceFolder": "/usr/src/app",
+  "service": "app",
+  "extensions": [
+    "rebornix.Ruby",
+    "castwide.solargraph",
+    "misogi.ruby-rubocop",
+    "kaiwood.endwise"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "[ruby]": {
+      "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
+    "solargraph.bundlerPath": "/usr/local/bin/bundle",
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
+    "solargraph.hover": true,
+    "solargraph.autoformat": true,
+    "solargraph.folding": true,
+    "ruby.rubocop.executePath": "/usr/local/bundle/bin/"
+  },
+  "shutdownAction": "stopCompose"
+}

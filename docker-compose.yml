@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: database
+      POSTGRES_PASSWORD: password
+    volumes:
+      - rails-postgres:/var/lib/postgresql/data
+
+volumes:
+  rails-postgres:
