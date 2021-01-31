@@ -6,22 +6,25 @@
   "extensions": [
     "rebornix.Ruby",
     "castwide.solargraph",
-    "misogi.ruby-rubocop",
-    "kaiwood.endwise"
+    "kaiwood.endwise",
+    "ms-vsliveshare.vsliveshare",
   ],
   "settings": {
     "editor.formatOnSave": true,
     "[ruby]": {
-      "editor.defaultFormatter": "misogi.ruby-rubocop"
-    },
-    "solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
-    "solargraph.bundlerPath": "/usr/local/bin/bundle",
-    "solargraph.diagnostics": true,
-    "solargraph.completion": true,
-    "solargraph.hover": true,
+    "editor.defaultFormatter": "castwide.solargraph",
+  },
     "solargraph.autoformat": true,
-    "solargraph.folding": true,
-    "ruby.rubocop.executePath": "/usr/local/bundle/bin/"
+    "solargraph.completion": true,
+    "solargraph.definitions": true,
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
+    "solargraph.hover": true,
+    "solargraph.references": true,
+    "solargraph.useBundler": true,
+    "solargraph.symbols": true,
+    "solargraph.rename": true,
+    "solargraph.logLevel": "debug"
   },
   "shutdownAction": "stopCompose"
 }
